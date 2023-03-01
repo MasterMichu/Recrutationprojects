@@ -22,7 +22,10 @@ class Migration(migrations.Migration):
                 ('user', models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
             ],
             options={
-                'permissions': [('change_task_status', 'Can change the status of tasks'), ('close_task', 'Can remove a task by setting its status as closed')],
+                'permissions': [
+                    ('change_task_status', 'Can change the status of tasks'),
+                    ('close_task', 'Can remove a task by setting its status as closed')
+                ],
             },
         ),
     ]

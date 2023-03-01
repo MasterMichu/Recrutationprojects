@@ -9,4 +9,5 @@ class CustomGroup(models.Model):
             return "{}".format(self.group.name)
 
         group = models.OneToOneField('auth.Group', unique=True, on_delete=models.CASCADE,)
-        picture_size = models.EmailField(max_length=70, blank=True, default="")
+        picture_size = models.fields.IntegerField(blank=True, default="0")
+
