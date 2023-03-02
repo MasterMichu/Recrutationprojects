@@ -1,0 +1,8 @@
+<a href="/accounts/logout/">logout</a>
+<a href="/add_picture">add picture</a>
+<h1>pictures list</h1>
+<ul>
+{% for picture in pictures_list%}
+    <li><a href={{picture.uploaded}}>{{ picture.name }} </a>></li>
+{% endfor %}
+</ul>

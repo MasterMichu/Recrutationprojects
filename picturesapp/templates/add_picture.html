@@ -1,0 +1,12 @@
+<a href="/accounts/logout/">logout</a>
+<a href="/pictures_list">pictures list</a>
+<h1> add picture</h1>
+{% if submitted %}
+<p> umieszczono zdjecie</p>
+{% else %}
+<form action="" method=POST enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit">
+</form>
+{% endif %}
