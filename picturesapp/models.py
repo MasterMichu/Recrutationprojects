@@ -10,9 +10,9 @@ class Picture(models.Model):
         return self.name
     class Meta:
         permissions = [
-            ("arbitrary thumbnail sizes", "Will recive arbitrary thumbnail sizes"),
-            ("Originally uploaded picture", "presence of the link to the originally uploaded file"),
-            ("Generate expiring links", "Ability to generate expiring links with custom expiration time"),
-            ("200px thumbnail", "Ability to generate 200px thumbnail"),
-            ("400px thumbnail", "Ability to generate 400px thumbnail"),
+            ("arbitrary_thumbnail_sizes", "Will recive arbitrary thumbnail sizes"),
+            ("Originally_uploaded_picture", "presence of the link to the originally uploaded file"),
+            ("Generate_expiring_links", "Ability to generate expiring links with custom expiration time"),
+            ("200px_thumbnail", "Ability to generate 200px thumbnail"),
+            ("400px_thumbnail", "Ability to generate 400px thumbnail"),
         ]

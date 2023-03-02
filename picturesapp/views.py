@@ -27,16 +27,16 @@ def add_picture(request):
 @login_required
 def all_pictures(request):
     picture_list = Picture.objects.filter(user=request.user)
-    print(request.user.has_perm("picturesapp.arbitrary thumbnail sizes"))
-    print(request.user.has_perm("picturesapp.Originally uploaded picture"))
-    print(request.user.has_perm("picturesapp.Generate expiring links"))
-    print(request.user.has_perm("picturesapp.200px thumbnail"))
-    print(request.user.has_perm("picturesapp.400px thumbnail"))
+    print(request.user.has_perm("picturesapp.arbitrary_thumbnail_sizes"))
+    print(request.user.has_perm("picturesapp.Originally_uploaded_picture"))
+    print(request.user.has_perm("picturesapp.Generate_expiring_links"))
+    print(request.user.has_perm("picturesapp.200px_thumbnail"))
+    print(request.user.has_perm("picturesapp.400px_thumbnail"))
     return render(request,"pictures_list.html",{
         "pictures_list": picture_list,
-        "200px thumbnail":request.user.has_perm("picturesapp.200px thumbnail"),
-        "400px thumbnail":request.user.has_perm("picturesapp.400px thumbnail"),
-        "Originally uploaded picture":request.user.has_perm("picturesapp.Originally uploaded picture"),
-        "arbitrary thumbnail sizes":request.user.has_perm("picturesapp.arbitrary thumbnail sizes"),
-        "Generate expiring links":request.user.has_perm("picturesapp.Generate expiring links"),
+        "200px_thumbnail": request.user.has_perm("picturesapp.200px_thumbnail"),
+        "400px_thumbnail": request.user.has_perm("picturesapp.400px_thumbnail"),
+        "Originally_uploaded_picture": request.user.has_perm("picturesapp.Originally_uploaded_picture"),
+        "arbitrary_thumbnail_sizes": request.user.has_perm("picturesapp.arbitrary_thumbnail_sizes"),
+        "Generate_expiring_links": request.user.has_perm("picturesapp.Generate_expiring_links"),
     })
