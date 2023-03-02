@@ -5,7 +5,7 @@ from django.conf import settings
 class Picture(models.Model):
     name = models.CharField(max_length=30)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True)
-    uploaded = models.ImageField(null=False, blank=False,upload_to="images/")
+    uploaded = models.ImageField(null=False, blank=False, upload_to="images/")
     def __str__(self):
         return self.name
     class Meta:
