@@ -6,19 +6,19 @@
     <li><p>
         {{ picture.name }}
         {% if 200px_thumbnail %}
-            <a>kasztan</a>
+            <a href='/images?image={{picture.uploaded}}&size=200' >200px thumbnail</a>
             {%endif%}
         {% if 400px_thumbnail %}
-            <a>kasztan</a>
+            <a href='/images?image={{picture.uploaded}}&size=400'>400px thumbnail</a>
             {%endif%}
         {% if Originally_uploaded_picture %}
-            <a>kasztan</a>
+            <a href='/images?image={{picture.uploaded}}&size=0'>originaly uploaded picture</a>
             {%endif%}
         {% if arbitrary_thumbnail_sizes %}
-            <a>kasztan</a>
+            <a href='/images?image={{picture.uploaded}}&size={{arbitrary_size}}'>arbitrary picture size</a>
             {%endif%}
         {% if Generate_expiring_links %}
-            <a>kasztan</a>
+            <a href='/expiring?image={{picture.uploaded}}'>generate expiring link</a>
             {%endif%}
         </p>
     </li>

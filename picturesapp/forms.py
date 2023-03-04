@@ -1,12 +1,15 @@
-from django import forms
 from django.forms import ModelForm
-from .models import Picture
+from .models import Picture, Expiringlink
 
 
-#create form
 class Pictureform(ModelForm):
 
     class Meta:
         model = Picture
         fields = ("name", "uploaded")
-        #widgets={"user":forms.HiddenInput()}
+
+
+class Expiringlinkform(ModelForm):
+    class Meta:
+        model = Expiringlink
+        fields = ("duration",)
