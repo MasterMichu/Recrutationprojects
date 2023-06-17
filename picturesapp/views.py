@@ -133,6 +133,9 @@ def bigest_picture_posible_for_user(request):
 
 
 def get_arbitrary_picturesize(request):
-    group = Group.objects.get(name=request.user.groups.all()[0].name)  # example name
-    arbitrary_picturesize = group.customgroup.picture_size
+    try:
+        group = Group.objects.get(name=request.user.groups.all()[0].name)  # example name
+        arbitrary_picturesize = group.customgroup.picture_size
+    except:
+        arbitrary_picturesize=0
     return arbitrary_picturesize
