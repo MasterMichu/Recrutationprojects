@@ -1,0 +1,14 @@
+Aktywuj venv
+Uruchom projekt python menage.py runserver  
+poprzez panel admina mozliwe jest stworzenie nowych grup i nowych userow
+Aplikacja umozliwia dodawanie swoich zdjec i przegladanie ich poprzez klikniecie w hiperlacze. 
+W zalenosci od grupy do ktorej jest przypisany uzytkownik przysluguja mu rozne uprawnienia, 
+przygotowane sa gotowe konta z ponizszymi loginami i haslami i uprawnieniami:
+
+login, haslo, uprawnienia
+200px, testuser, podglad zdjecia w wymiarach 200px*200px
+400px, testuser, podglad zdjecia w wymiarach 400px*400px
+300px, testuser, podglad zdjecia w wymiarach 300px*300px
+ori,   testuser, podglad zdjecia w oryginalnych wymiarach
+disipiring, testuser, wygenerowanie linku do zdjecia ktory bedzie dostepny przez okreslona ilosc czasu w sekundach
+admin, admin, konto administratora
